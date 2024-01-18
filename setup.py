@@ -11,5 +11,6 @@ setup(
         [console_scripts]
         hello=hello_world:say
         food=restaurant:freddys
+        inout=inout:cli
 '''
 )
