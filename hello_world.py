@@ -13,14 +13,12 @@ pass_config = click.make_pass_decorator(Info, ensure=True)
 @click.option('--home_directory', type=click.Path())
 
 @pass_config
-def cli(config, verbose, home_directory):
+def say(config, verbose, home_directory):
     config.verbose=verbose
     config.home_directory=home_directory
 
 
-
-
-@cli.command()
+@say.command()
 @click.option('--count', default=1, help='Number of greetings.')
 @click.option('--fname', prompt='Your firt name',
               help='The first name of person to greet.', default="Mouad")
@@ -29,7 +27,7 @@ def cli(config, verbose, home_directory):
               help='The last name of person to greet.', default="Et-tali")
 @click.argument('out', type=click.File('a'), default='-')
 @pass_config
-def say(config, count, fname, lname, out):
+def hello(config, count, fname, lname, out):
     """Simple program that greets LNAME FNAME for a total of COUNT times.
 
     Args:
