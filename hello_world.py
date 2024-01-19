@@ -25,7 +25,7 @@ def say(config, verbose, home_directory):
 
 @click.option('--lname', prompt='Your last name',
               help='The last name of person to greet.', default="Et-tali")
-@click.argument('out', type=click.File('a'), default='-')
+@click.argument('out', type=click.File('w'), default='-')
 @pass_config
 def hello(config, count, fname, lname, out):
     """Simple program that greets LNAME FNAME for a total of COUNT times.
