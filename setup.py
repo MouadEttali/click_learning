@@ -3,7 +3,7 @@ from setuptools import setup
 setup(
     name='aliases',
     version='1.0',
-    py_modules=['hello_world','restaurant','inout','naval',"aliases"],
+    py_modules=['hello_world','restaurant','inout','naval',"aliases",'colors'],
     install_requires=[
         'Click'
     ],
@@ -14,5 +14,6 @@ setup(
         inout=inout:cli
         naval=naval:cli
         aliases=aliases:cli
+        colors=colors:cli
 '''
 )
